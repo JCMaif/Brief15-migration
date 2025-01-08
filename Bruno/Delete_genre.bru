@@ -1,11 +1,11 @@
 meta {
-  name: Post_genre
+  name: Delete_genre
   type: http
-  seq: 4
+  seq: 5
 }
 
-post {
-  url: {{host}}/genre
+delete {
+  url: {{host}}/genre/{{id}}
   body: json
   auth: none
 }
@@ -23,4 +23,8 @@ body:json {
 
 body:multipart-form {
   nom: sql
+}
+
+vars:pre-request {
+  id: 9
 }

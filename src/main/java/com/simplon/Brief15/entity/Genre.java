@@ -1,6 +1,7 @@
 package com.simplon.Brief15.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,6 +25,6 @@ public class Genre {
     private String nom;
 
     @ManyToMany(mappedBy = "genres")
-    @JsonBackReference
+    @JsonIgnore(value = true)
     private Set<Livre> livres = new HashSet<>();
 }

@@ -31,6 +31,5 @@ public class Livre {
             joinColumns = @JoinColumn(name = "livre_id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id")
     )
-    @JsonManagedReference
     private Set<Genre> genres = new HashSet<>();
 }
