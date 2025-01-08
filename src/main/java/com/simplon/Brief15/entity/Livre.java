@@ -1,5 +1,7 @@
 package com.simplon.Brief15.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,7 +31,6 @@ public class Livre {
             joinColumns = @JoinColumn(name = "livre_id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id")
     )
+    @JsonManagedReference
     private Set<Genre> genres = new HashSet<>();
-
-
 }
