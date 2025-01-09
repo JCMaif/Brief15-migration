@@ -77,5 +77,5 @@ Dans le dossier resources/db/migration:
 
 ## TESTS
 
-Tous les endpoints on été testé avec useBruno. La collection de ces tests se trouve dans le dossier Bruno à la racine du projet.
+Tous les endpoints on été testés avec useBruno. La collection de ces tests se trouve dans le dossier Bruno à la racine du projet.
 
