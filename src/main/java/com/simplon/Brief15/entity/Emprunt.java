@@ -1,5 +1,6 @@
 package com.simplon.Brief15.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,9 +25,11 @@ public class Emprunt {
 
     @ManyToOne
     @JoinColumn(name = "emprunteur_id", nullable = false)
+    @JsonIgnore
     private Emprunteur emprunteur;
 
     @ManyToOne
     @JoinColumn(name = "livre_id", nullable = false)
+    @JsonIgnore
     private Livre livre;
 }

@@ -1,0 +1,27 @@
+meta {
+  name: Post_livre
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{host}}/livre
+  body: json
+  auth: none
+}
+
+headers {
+  content-type: application/json
+}
+
+body:json {
+  {
+    "title": "Nouveau livre",
+    "author": "Moi",
+    "genres": 1
+  }
+}
+
+body:multipart-form {
+  nom: sql
+}

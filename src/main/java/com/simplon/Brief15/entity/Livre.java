@@ -1,5 +1,6 @@
 package com.simplon.Brief15.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -31,5 +32,6 @@ public class Livre {
             joinColumns = @JoinColumn(name = "livre_id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id")
     )
+    @JsonIgnore
     private Set<Genre> genres = new HashSet<>();
 }

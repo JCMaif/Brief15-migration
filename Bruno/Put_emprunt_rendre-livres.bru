@@ -1,0 +1,35 @@
+meta {
+  name: Put_emprunt_rendre-livres
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{host}}/emprunt/{{emprunteurId}}/rendre?empruntIds=9,11
+  body: json
+  auth: none
+}
+
+params:query {
+  empruntIds: 9,11
+}
+
+headers {
+  content-type: application/json
+}
+
+body:json {
+  {
+    "title": "Nouveau livre",
+    "author": "Moi",
+    "genres": 1
+  }
+}
+
+body:multipart-form {
+  nom: sql
+}
+
+vars:pre-request {
+  emprunteurId: 9
+}

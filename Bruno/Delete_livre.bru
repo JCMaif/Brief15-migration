@@ -1,0 +1,30 @@
+meta {
+  name: Delete_livre
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{host}}/livre/{{id}}
+  body: json
+  auth: none
+}
+
+headers {
+  content-type: application/json
+}
+
+body:json {
+  {
+    "nom": "Sql",
+    "livres": []
+  }
+}
+
+body:multipart-form {
+  nom: sql
+}
+
+vars:pre-request {
+  id: 21
+}

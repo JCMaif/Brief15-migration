@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmpruntRepository extends JpaRepository<Emprunt, Long> {
+    boolean existsByLivreIdAndDateRetourIsNull(Long livreId);
 }

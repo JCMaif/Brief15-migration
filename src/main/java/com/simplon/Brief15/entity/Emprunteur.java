@@ -28,5 +28,4 @@ public class Emprunteur {
 
     @OneToMany(mappedBy = "emprunteur", cascade = CascadeType.ALL)
     private Set<Emprunt> emprunts = new HashSet<>();
-
 }

@@ -1,0 +1,32 @@
+meta {
+  name: Post_emprunt
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{host}}/emprunt?emprunteurId=9&livreId=12
+  body: json
+  auth: none
+}
+
+params:query {
+  emprunteurId: 9
+  livreId: 12
+}
+
+headers {
+  content-type: application/json
+}
+
+body:json {
+  {
+    "title": "Nouveau livre",
+    "author": "Moi",
+    "genres": 1
+  }
+}
+
+body:multipart-form {
+  nom: sql
+}
