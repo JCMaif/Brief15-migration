@@ -70,10 +70,10 @@ Dans le dossier resources/db/migration:
 
 * Emprunt
 
-| Endpoint              | Operation | Réponse |
-|-----------------------|-----------|---------|
-| "POST api/emprunt"      | createEmprunt   | 201     |
-| "PUT api/emprunt/{emprunteurId}/rendre"  | rendreLivres  | 200     |
+| Endpoint                                                                 | Operation | Réponse |
+|--------------------------------------------------------------------------|-----------|---------|
+| "POST api/emprunt"                                                       | createEmprunt   | 201     |
+| "PUT api/emprunt/{emprunteurId}/rendre?empruntIds={livreId1},{livreId2}" | rendreLivres  | 200     |
 
 ## TESTS
 
